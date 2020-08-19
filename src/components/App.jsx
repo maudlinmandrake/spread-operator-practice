@@ -18,8 +18,12 @@ function App() {
     setInputText("");
   }
 
-  function deleteItem() {
-    setToDoItems((prevItems) => {});
+  function deleteItem(id) {
+    setToDoItems((prevItems) => {
+      return prevItems.filter((item, index) => {
+        return index !== id;
+      });
+    });
   }
 
   return (
