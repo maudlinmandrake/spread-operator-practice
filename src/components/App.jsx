@@ -18,7 +18,9 @@ function App() {
     setInputText("");
   }
 
-  function deleteItem() {}
+  function deleteItem() {
+    setToDoItems((prevItems) => {});
+  }
 
   return (
     <div className="container">
@@ -33,8 +35,8 @@ function App() {
       </div>
       <div>
         <ul>
-          {toDoItems.map((toDoItem) => (
-            <ToDoItem text={toDoItem} onChecked={deleteItem} />
+          {toDoItems.map((toDoItem, index) => (
+            <ToDoItem key={index} text={toDoItem} onChecked={deleteItem} />
           ))}
         </ul>
       </div>
