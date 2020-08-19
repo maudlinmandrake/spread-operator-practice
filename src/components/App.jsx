@@ -14,6 +14,7 @@ function App() {
     setToDoItems((prevToDos) => {
       return [...prevToDos, inputText];
     });
+    setInputText("");
   }
 
   return (
