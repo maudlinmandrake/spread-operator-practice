@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function App() {
   const [inputText, setInputText] = useState("");
+  const [toDoItems, setToDoItems] = useState([]);
 
   function handleChange(event) {
     const newValue = event.target.value;
@@ -22,7 +23,9 @@ function App() {
       </div>
       <div>
         <ul>
-          <li>To do</li>
+          {toDoItems.map((toDoItem) => (
+            <li>{toDoItem}</li>
+          ))}
         </ul>
       </div>
     </div>
