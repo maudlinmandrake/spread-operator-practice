@@ -36,7 +36,12 @@ function App() {
       <div>
         <ul>
           {toDoItems.map((toDoItem, index) => (
-            <ToDoItem key={index} text={toDoItem} onChecked={deleteItem} />
+            <ToDoItem
+              key={index}
+              id={index}
+              text={toDoItem}
+              onChecked={deleteItem}
+            />
           ))}
         </ul>
       </div>
