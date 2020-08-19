@@ -1,22 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 function ToDoItem(props) {
-  const [isDone, setIsDone] = useState(false);
+  function handleClick() {}
 
-  function handleClick() {
-    setIsDone((prevValue) => {
-      return !prevValue;
-    });
-  }
-
-  return (
-    <li
-      onClick={handleClick}
-      style={{ textDecoration: isDone ? "line-through" : "none" }}
-    >
-      {props.text}
-    </li>
-  );
+  return <li onClick={props.onChecked}>{props.text}</li>;
 }
 
 export default ToDoItem;
